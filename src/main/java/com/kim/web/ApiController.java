@@ -6,11 +6,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.io.IOException;
 import java.util.List;
 
 @RestController
-public class Controller {
+public class ApiController {
 
     @Autowired
     private ExcelService excelService;
@@ -21,7 +20,7 @@ public class Controller {
     }
 
     @RequestMapping("/list")
-    List list() throws IOException {
+    List list() {
         return excelService.getFileList();
     }
 }
