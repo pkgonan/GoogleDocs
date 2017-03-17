@@ -1,15 +1,14 @@
-<!DOCTYPE html>
 <html>
 <head>
     <title>Google Docs</title>
-    <link href="/css/main.css" rel="stylesheet">
-    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <script src="/webjars/jquery/jquery.min.js"></script>
-    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
-    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
-    <script src="/webjars/angularjs/1.5.9/angular.min.js"></script>
-    <script src="/js/angular.js"></script>
-    <script src="/js/websocket.js"></script>
+    <link href="/css/main.css" type="text/css">
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" type="text/css">
+    <script src="/webjars/jquery/jquery.min.js" type="application/javascript"></script>
+    <script src="/webjars/sockjs-client/sockjs.min.js" type="application/javascript"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js" type="application/javascript"></script>
+    <script src="/webjars/angularjs/1.5.9/angular.min.js" type="application/javascript"></script>
+    <script src="/js/angular.js" type="application/javascript"></script>
+    <script src="/js/websocket.js" type="application/javascript"></script>
 </head>
 <body onload="connect()" onunload="disconnect()">
 <h1>협업 도구</h1>

@@ -2,8 +2,7 @@ package com.kim.web;
 
 import com.kim.service.ExcelService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
@@ -16,11 +15,16 @@ public class ApiController {
 
     @RequestMapping("/")
     ModelAndView home() {
-        return new ModelAndView("index");
+        return new ModelAndView("home");
     }
 
     @RequestMapping("/list")
     List list() {
         return excelService.getFileList();
+    }
+
+    @RequestMapping("/hello")
+    ModelAndView hello() {
+        return new ModelAndView("hello");
     }
 }
