@@ -8,7 +8,6 @@ import javax.validation.constraints.NotNull;
 @Entity
 @Data
 public class User {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long num;

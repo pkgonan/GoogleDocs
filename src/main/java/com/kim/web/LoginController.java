@@ -13,7 +13,6 @@ import javax.servlet.http.HttpSession;
 
 @RestController
 public class LoginController {
-
     @Autowired
     private LoginService loginService;
 
