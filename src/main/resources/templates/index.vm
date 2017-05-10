@@ -1,33 +1,19 @@
 <html>
 <head>
     <title>Google Docs</title>
-    <link href="/css/main.css" type="text/css">
-    <link href="/webjars/bootstrap/css/bootstrap.min.css" type="text/css">
-    <script src="/webjars/jquery/jquery.min.js" type="application/javascript"></script>
+    <link rel="stylesheet" media="screen" href="/webjars/handsontable/0.31.1/dist/handsontable.full.css" type="text/css">
+    <script src="/webjars/jquery/3.2.0/jquery.min.js" type="application/javascript"></script>
+    <script src="/webjars/handsontable/0.31.1/dist/handsontable.full.js" type="application/javascript"></script>
     <script src="/webjars/sockjs-client/sockjs.min.js" type="application/javascript"></script>
     <script src="/webjars/stomp-websocket/stomp.min.js" type="application/javascript"></script>
-    <script src="/webjars/angularjs/1.5.9/angular.min.js" type="application/javascript"></script>
-    <script src="/js/angular.js" type="application/javascript"></script>
-    <script src="/js/websocket.js" type="application/javascript"></script>
+    <script src="/js/websocket.js?ver=1" type="application/javascript"></script>
 </head>
 <body onload="connect()" onunload="disconnect()">
+</head>
 <h1>협업 도구</h1>
 <h3>동시에 다수의 사용자가 하나의 엑셀파일을 만들 수 있다</h3>
-<div ng-app="myApp" ng-controller="sheet">
-    <table>
-        <tr class="column-label">
-            <td></td>
-            <td ng-repeat="column in columns track by $index">{{column}}</td>
-        </tr>
-        <tr ng-repeat="row in rows track by $index">
-            <td class="row-label">{{row}}</td>
-            <td ng-repeat="column in columns track by $index">
-                <div>
-                    <input ng-model="cells[column+row]" ng-change="compute(column+row)"/>
-                </div>
-            </td>
-        </tr>
-    </table>
-</div>
+<div id="example"></div>
+
+<script src="/js/excel.js?ver=1" type="application/javascript"></script>
 </body>
 </html>
