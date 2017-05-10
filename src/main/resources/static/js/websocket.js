@@ -32,12 +32,12 @@ function disconnect() {
     console.log("Disconnected");
 }
 
-function send(position, value) {
-    stompClient.send("/app/server", {}, JSON.stringify({'position': position, 'value': value}));
+function send(cell_i, cell_j, value) {
+    stompClient.send("/app/server", {}, JSON.stringify({'cell_i': cell_i, 'cell_j': cell_j, 'value': value}));
 }
 
-function show(message) {
-    insert(message.position, message.value);
+function show(m) {
+    insert(m.cell_i, m.cell_j, m.value);
 }
 
 $(function () {
@@ -46,5 +46,5 @@ $(function () {
     });
     $( "#connect" ).click(function() { connect(); });
     $( "#disconnect" ).click(function() { disconnect(); });
-    $( "#send" ).click(function() { sendName(); });
+    $( "#send" ).click(function() { });
 });
